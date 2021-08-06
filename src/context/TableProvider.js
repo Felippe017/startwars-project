@@ -12,7 +12,7 @@ function TableProvider({ children }) {
     filterByNumericValues: {
       column: 'population',
       comparison: 'maior que',
-      value: 0,
+      number: 0,
     },
   });
   // const [filterByNumericValue, setFilterByNumericValue] = useState([]);
@@ -34,8 +34,6 @@ function TableProvider({ children }) {
 
   const handleClick = () => {
     const { column, comparison, number } = filters;
-    // const test = (parseInt(comparison, 10));
-    // console.log(test);
     const filterData = data.filter((e) => {
       if (comparison === 'maior que') {
         console.log(typeof (Number(e[column])));
